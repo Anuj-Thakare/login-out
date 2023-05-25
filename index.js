@@ -20,7 +20,7 @@ var Login = mongoose.model('Login', loginSchema);
 // Using Middleware
 app.use(express.static(path.join(path.resolve(),"public"))); //for getting static file
 app.use(express.urlencoded({exended:true})); //we can access the data using this.
-app.use(cookieParser());
+app.use(cookieParser()); // This is also a middleware
 
 // setting up view engine
 app.set("view engine","ejs");
